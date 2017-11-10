@@ -1,4 +1,5 @@
 import matplotlib.pyplot
+import math
 from decimal import *
 
 func = input("Type the function (y'): ")
@@ -10,8 +11,8 @@ tf = 0
 y = []
 t = []
 #PVI
-y.append(Decimal(input("Type the y0: ")));
-t.append(Decimal(input("Type the t0: ")));
+y.append(Decimal(input("Type the y0: ")))
+t.append(Decimal(input("Type the t0: ")))
 #Menu options
 print("1 - Enter height and number of steps(divisions)")
 print("2 - Enter height and the tf")
@@ -19,17 +20,17 @@ print("3 - Enter number of steps(divisions) and the tf")
 opt = int(input())
 #Get chosen variables
 if (opt == 1):
-    height = Decimal(input("Type the h: "));
-    n_steps = int(input("Type the n: "));
-    tf = height * n_steps + t[0];
+    height = Decimal(input("Type the h: "))
+    n_steps = int(input("Type the n: "))
+    tf = height * n_steps + Decimal(t[0])
 elif (opt == 2):
-    height = Decimal(input("Type the h: "));
-    tf = Decimal(input("Type the tf: "));
-    n_steps = (tf - t[0])/height;
+    height = Decimal(input("Type the h: "))
+    tf = Decimal(input("Type the tf: "))
+    n_steps = (tf - Decimal(t[0]))/height
 elif(opt == 3):
-    n_steps = int(input("Type the n: "));
-    tf = Decimal(input("Type the tf: "));
-    height = (tf-t[0])/n_steps;
+    n_steps = int(input("Type the n: "))
+    tf = Decimal(input("Type the tf: "))
+    height = (tf- Decimal(t[0]))/n_steps
 #Euler
 i = 0;
 while t[i] < tf:
@@ -39,7 +40,10 @@ while t[i] < tf:
     #If you want to see each iteration:
     #print("y({}) = {}".format(t[i], y[i]));
 #Output
-print("y({}) = {}".format(tf, y[len(y)- 1]));
+print("y({}) = {}".format(tf, y[len(y)- 1]))
+matplotlib.pyplot.title("Euler")
+matplotlib.pyplot.xlabel("t")
+matplotlib.pyplot.ylabel("y")
+matplotlib.pyplot.grid(True)
 matplotlib.pyplot.plot(t,y);
 matplotlib.pyplot.show()
-

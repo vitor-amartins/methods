@@ -1,4 +1,5 @@
 import matplotlib.pyplot
+import math
 from decimal import *
 
 func = input("Type the function (y'): ");
@@ -151,6 +152,10 @@ else:
     exit (1)
 
 #Output
-print("y({}) = {}".format(tf, y[len(y)- 1]));
-matplotlib.pyplot.plot(t,y);
+print("y({}) = {}".format(tf, y[len(y)- 1]))
+matplotlib.pyplot.title("Adams-Bashforth")
+matplotlib.pyplot.xlabel("t")
+matplotlib.pyplot.ylabel("y")
+matplotlib.pyplot.grid(True)
+matplotlib.pyplot.plot(t,y)
 matplotlib.pyplot.show()
