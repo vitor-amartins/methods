@@ -22,12 +22,10 @@ if (opt == 1):
     height = Decimal(input("Type the h: "))
     n_steps = int(input("Type the n: "))
     tf = height * n_steps + t[0]
-    print("tf = {}".format(tf))
 elif (opt == 2):
     height = Decimal(input("Type the h: "))
     tf = Decimal(input("Type the tf: "))
     n_steps = (tf - t[0])/height
-    print("n = {}".format(n_steps))
 elif(opt == 3):
     n_steps = int(input("Type the n: "))
     tf = Decimal(input("Type the tf: "))
