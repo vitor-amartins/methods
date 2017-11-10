@@ -31,6 +31,8 @@ elif(opt == 3):
     n_steps = int(input("Type the n: "))
     tf = Decimal(input("Type the tf: "))
     height = (tf- Decimal(t[0]))/n_steps
+else:
+    exit (1)
 #Euler
 i = 0;
 while t[i] < tf:

@@ -32,6 +32,8 @@ elif(opt == 3):
     n_steps = int(input("Type the n: "))
     tf = Decimal(input("Type the tf: "))
     height = (tf-t[0])/n_steps
+else:
+    exit (1)
 #Order options
 print("Choose the order of Adams-Bashforth")
 print("1 - First order")

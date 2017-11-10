@@ -7,6 +7,7 @@ func = input("Type the function (y'): ")
 def function(t, y):
     return eval(func)
 
+tf = 0
 y = []
 t = []
 y_prev = []

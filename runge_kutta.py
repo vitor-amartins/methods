@@ -2,13 +2,14 @@ import matplotlib.pyplot
 import math
 from decimal import *
 
-func = input("Type the function (y'): ");
+func = input("Type the function (y'): ")
 
 def function(t, y):
-    return eval(func);
+    return eval(func)
 
-y = [];
-t = [];
+tf = 0
+y = []
+t = []
 #PVI
 y.append(Decimal(input("Type the y0: ")))
 t.append(Decimal(input("Type the t0: ")))
@@ -29,11 +30,13 @@ elif (opt == 2):
 elif(opt == 3):
     n_steps = int(input("Type the n: "))
     tf = Decimal(input("Type the tf: "))
-    height = (tf-t[0])/n_steps;
+    height = (tf-t[0])/n_steps
+else:
+    exit (1)
 #Runge-Kutta
-i = 0;
+i = 0
 while t[i] < tf:
-    i += 1;
+    i += 1
     yn = y[i - 1]
     tn = t[i - 1]
     k1 = Decimal(function(tn, yn))
