@@ -80,6 +80,8 @@ EVERYTHING ABOUT THE IMPLEMENTATIONS AND THE USE OF THE METHODS CAN BE FOUND IN 
     If the option chosen was 4, the next two inputs will be the y1 and y2
     If the option chosen was 5, the next three inputs will be the y1, y2 and y3
     If the option chosen was 6, the next four inputs will be the y1, y2, y3 and y4
+    
+·The output is going to be the y(tf) and the graph of y
 ----    Adams-Moulton    ----
 
 Made by Vitor Martins on November 10th, 2017
